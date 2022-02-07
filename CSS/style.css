@@ -2,11 +2,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
-
 html, body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -44,8 +39,8 @@ html, body {
 
 .header__logo {
     color: var(--color-primary);
-    font-size: 2rem;
-    font-family: Raleway;
+    font: normal normal 300 32px/37px Raleway;
+    letter-spacing: 0;
 }
 
 .header__menu {
@@ -260,7 +255,7 @@ h2 {
     width: 386px;
     height: 219px;
     top: 20%;
-    right:0;
+    right: 0;
 }
 
 .benefit__content {
@@ -304,6 +299,7 @@ h2 {
     border-radius: 5px;
 
 }
+
 .double-box__left-box, .double-box__right-box {
     border: 1px solid #E8E9ED;
     border-radius: 5px;
@@ -329,7 +325,7 @@ h2 {
 }
 
 .img-trumpet {
-   width: 295px;
+    width: 295px;
 }
 
 .benefit__text {
@@ -337,6 +333,7 @@ h2 {
     flex-direction: column;
 
 }
+
 .first::after {
     content: "";
     width: 328px;
@@ -427,6 +424,7 @@ h3 {
     padding-bottom: 20px;
     text-align: center;
 }
+
 .offer__list-element {
     display: flex;
     align-items: center;
@@ -565,6 +563,31 @@ form input[type="email"] {
     letter-spacing: 0;
     color: #707070;
     margin: 20px auto;
+    cursor: pointer;
+    display: flex;
+}
+
+.form__checkbox {
+    position: relative;
+}
+
+.form__checkbox input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.form__checkbox .checkbox {
+    width: 24px;
+    height: 24px;
+    padding: 11px;
+    border-radius: 4px;
+    border: 1px solid #95989A;
+    margin-right: 10px;
+}
+
+.form__checkbox input:checked ~ .checkbox {
+    background: url("../assets/Checkmark.svg") center center no-repeat;
 }
 
 .btn-send {
@@ -582,11 +605,38 @@ form input[type="email"] {
     color: var(--color-white);
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-light-grey);
+    box-shadow: 0 -5px 40px #00000029;
+}
 
+.footer {
+    max-width: 1353px;
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
 
+.footer .header__logo {
+    font: normal normal 300 26px/30px Raleway;
+}
 
+.rights {
+    font: normal normal normal 11px/15px Open Sans;
+    letter-spacing: 0;
+    margin-top: 6.5px;
+    color: var(--color-grey);
+}
 
+.footer__socialmedia img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
 
 
 
